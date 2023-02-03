@@ -102,15 +102,16 @@ form {
 form label {
   font-weight: bold;
   /* width: 33%; */
-  flex: 30%;
+  flex: 100%;
   padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 form select,
 form input {
   margin-bottom: 20px;
-  /* width: 180px; */
-  flex: 50%;
+  width: 180px;
 }
 
 form button {
@@ -137,7 +138,31 @@ footer p {
 /* -------  Media Query ------- */
 
 @media all and (min-width: 480px) {
-  p {
-    font-size: 24px;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  form {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  form label {
+    max-width: 19%;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 20px 0 0;
+  }
+
+  form select,
+  form input {
+    width: 100%;
+    max-width: 240px;
+    margin: 3px 0 0 0;
+  }
+
+  form button {
+    max-width: 180px;
   }
 }
