@@ -40,11 +40,15 @@ section.alternate-background {
 .group {
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
+}
+
+.group p {
+  align-self: center;
 }
 
 .item {
   flex: 1;
-  margin: 10px;
 }
 
 .item-double {
@@ -101,7 +105,6 @@ form {
 
 form label {
   font-weight: bold;
-  /* width: 33%; */
   flex: 100%;
   padding-left: 10px;
   display: flex;
@@ -111,7 +114,7 @@ form label {
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  max-width: 180px;
 }
 
 form button {
@@ -164,5 +167,41 @@ footer p {
 
   form button {
     max-width: 180px;
+  }
+
+  section img {
+    width: 100px;
+  }
+
+  .group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5%;
+  }
+
+  .group div {
+    display: flex;
+    flex-direction: column;
+    flex: 49.5%;
+  }
+
+  .group div img {
+    width: 100%;
+  }
+
+  #host {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #host div {
+    flex: 49.5%;
+  }
+
+  #host img {
+    width: 100%;
   }
 }
